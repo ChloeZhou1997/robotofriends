@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import './App.css'
@@ -36,11 +36,11 @@ class App extends Component{
 			<div className='tc'>
 				<h1 className='f1'>RobotFriends</h1>
 				<Scroll>
-				<SearchBox searchChange={this.onSearchChange}/>
-{/*					<ErrorBoundry>
-*/}						<CardList robots={filterRobots} />
-{/*					</ErrorBoundry>
-*/}				</Scroll>
+					<SearchBox searchChange={this.onSearchChange}/>
+	{/*					<ErrorBoundry>*/}
+					<CardList robots={filterRobots} />
+{/*					</ErrorBoundry>*/}
+				</Scroll>
 			</div>
 		);
 	}
